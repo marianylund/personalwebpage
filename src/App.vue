@@ -1,9 +1,9 @@
 <template>
-  <v-app>
+  <v-app :style="{background: $vuetify.theme.themes.dark.background}">
       <NavigationBar />
       <NavigationDrawer />
 
-    <v-main>
+    <v-main class="mx-4 mb-4" >
       <router-view> </router-view>
     </v-main>
   </v-app>

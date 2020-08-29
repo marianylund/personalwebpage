@@ -8,4 +8,20 @@ export default new Vuetify({
     icons: {
       iconfont: 'mdi', // default - only for display purposes
     },
+    theme: {
+        themes: { 
+            dark: {
+                primary: '#25171A',
+                secondary: '#b0bec5',
+                background: '#d09ea8',
+                accent: '#efcb27', // yellowBahaus
+                error: '#d0221c', // redBahaus
+                info: '#C9F0FF', // columbiaBlue
+                success: '#357db2', // blueBahaus
+                warning: '#878E88', //battleshipGrey
+                anchor: '#8c9eff',
+        } },
+        dark: true,
+    },
+    
   })
