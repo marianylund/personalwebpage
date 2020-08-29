@@ -1,5 +1,6 @@
 <template>
   <v-app>
+      <NavigationBar />
       <NavigationDrawer />
 
     <v-main>
@@ -11,12 +12,14 @@
 <script lang="ts">
 import Vue from "vue";
 import NavigationDrawer from "./components/NavigationDrawer.vue";
+import NavigationBar from "./components/NavigationBar.vue";
 
 export default Vue.extend({
   name: "App",
 
   components: {
-    NavigationDrawer
+    NavigationDrawer,
+    NavigationBar
   },
 
   data: () => ({

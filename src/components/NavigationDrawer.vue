@@ -1,27 +1,35 @@
 <template>
   <v-container>
-
-      <v-navigation-drawer
-        v-model="drawer"
-        app 
-        dark
-        permanent
-      >
-        <v-list
-          nav
-        >
+    <v-navigation-drawer permanent v-if="drawerVisibility" app dark disable-resize-watcher>
+    <v-list nav>
+        <v-list-item>
+        <v-list-item-avatar class="outlinedAvatar" size=150>
+            <img src="../assets/profile.jpg">
+        </v-list-item-avatar>
         
-          <v-list-item>
-            <v-list-item-avatar class="outlinedAvatar" size=150>
-              <img src="../assets/profile.jpg">
-            </v-list-item-avatar>
-           
-          </v-list-item>
-        </v-list>
-      </v-navigation-drawer>
+        </v-list-item>
+    </v-list>
+    </v-navigation-drawer>
 
   </v-container>
 </template>
+
+<script>
+  export default {
+    mounted () {
+      console.log(this.$vuetify.breakpoint)
+    },
+
+    computed: {
+      drawerVisibility () {
+          if(this.$vuetify.breakpoint.name == 'xs'){
+              return false;
+          }
+          return true;
+      },
+    },
+  }
+</script>
 
 <style scoped>
 .outlinedAvatar {
