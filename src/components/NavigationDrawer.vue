@@ -1,6 +1,10 @@
 <template>
   <v-container>
-    <v-navigation-drawer permanent v-if="drawerVisibility" app disable-resize-watcher color="primary">
+    <v-navigation-drawer permanent 
+        v-if="drawerVisibility" 
+        app disable-resize-watcher
+        color="primary"
+        >
     <v-list nav>
         <v-list-item>
         <v-list-item-avatar class="outlinedAvatar" size=150>
