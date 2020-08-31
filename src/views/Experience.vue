@@ -6,10 +6,20 @@
         </v-flex>
 
         <v-flex my-3 xs12 v-for="(job, i) in jobs" :key="i">
-          <v-card flat class="text-center">
+          <v-card flat color="rgb(255, 0, 0, 0)">
+            <v-layout row wrap justify-space-between>
+              <v-flex xs12 sm4 md8>
+            <v-card-title>{{job.role}}</v-card-title>
+              </v-flex>
+              <v-flex xs12 sm3 md2>
+                <v-card-text>
+              <div>{{job.date}}</div>
+            </v-card-text>
+              </v-flex>
+            </v-layout>
+            <v-card-subtitle>{{job.company}}</v-card-subtitle>
             <v-card-text>
-              <div class="subheading">{{job.role}}</div>
-              <div class="grey--text">{{job.date}}</div>
+              <div>{{job.description}}</div>
             </v-card-text>
           </v-card>
         </v-flex>
@@ -24,8 +34,10 @@ export default {
   data() {
     return{
       jobs: [
-        {role: 'Test', date: '01.01.2001'},
-        {role: 'Test2', date: '01.01.2001'}
+        {role: 'Intern', company: 'Cisco Systems Inc', date: '2020 Summer', 
+        description: 'Worked on the Co-Creation team with the white-boarding feature on Cisco’s devices and Webex Teams. Usedtechnologies and tools such as C++, Qt and OpenGL daily to research and implement textured pen strokes'},
+        {role: 'VR Developer',  company: 'Breach Reality', date: '2019 Jun -2020 Apr', 
+        description: 'Developing multiplayer, location-based VR puzzle game for the Oculus Quest headset. Started as a summerinternship which continued as a part-time job (40%)'}
       ]
     }
   }
