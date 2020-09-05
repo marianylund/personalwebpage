@@ -55,7 +55,7 @@ export default {
         projects: [
         {show: false, title: 'Global Warming', subtitle: 'Bachelor Project', date: '2019 Spring',
         img: '/globalwarming.png',
-        technology: 'Unity, C#', 
+        technology: 'Unity, C#, SteamVR', 
         description: 'Worked on creating a VR-application in a group of 6 students. There a user explores Trondheim using the Virtuix Omni Treadmill to walk around the city. The program consists of two modes, a quest player and a custom climate quest. Quests consist mainly of a route of InfoPoints aimed at teaching the user about different topics (E.g history and geography).Primarily, it was to make a product the customer could present at The Big Challenge festival in the middle of June. The goal of this part was to present the users with a fun and informative experience of how global warming would affect them locally in Trondheim',
         disableExplore: true,
         exploreRef: '',
@@ -69,7 +69,7 @@ export default {
         },
         {show: false, title: 'Q Table Reinforcement Learning', subtitle: 'Machine learning project', date: '2020 Spring',
         img: '/qtable.png',
-        technology: 'Python (numpy, math and random libraries)',  
+        technology: 'Python, Jupyter Notebook',  
         description: 'To explain how one can use Q Tables I came up with an important survival skill we all had to learn in 2020.  The ability to go to Kiwi and back without meeting another person. Thus we are creating a survivor that will learn the best path from home to kiwi and back.',
         disableExplore: true,
         exploreRef: '',

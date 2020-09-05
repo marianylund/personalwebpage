@@ -43,7 +43,7 @@
       data(){
           return {
               items: [
-                { icon: 'mdi-account', title: 'About', route: '/about' },
+                { icon: 'mdi-account', title: 'About', route: '/' },
                 { icon: 'mdi-account', title: 'Projects', route: '/projects' },
                 { icon: 'mdi-account', title: 'Experience', route: '/experience' },
                 { icon: 'mdi-account', title: 'Education', route: '/education' },
