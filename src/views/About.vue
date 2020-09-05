@@ -4,8 +4,8 @@
       <v-layout row wrap align-center>
 
         <v-flex xs12>
-          <span class="text-h2 primary--text">Maria Emine</span>
-          <span class="text-h2"> Nylund</span>
+          <span class="text-h2 primaryLighter--text">Maria Emine</span>
+          <span class="text-h2 font-weight-medium primary--text"> Nylund</span>
         </v-flex>
 
         <v-flex xs12 md8>

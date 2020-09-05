@@ -12,8 +12,9 @@ export default new Vuetify({
         themes: { 
             dark: {
                 primary: '#25171A',
+                primaryLighter: '#54343b',
                 secondary: '#b0bec5',
-                background: '#d09ea8',
+                background: '#f0e0e3',
                 accent: '#efcb27', // yellowBahaus
                 error: '#d0221c', // redBahaus
                 info: '#C9F0FF', // columbiaBlue
