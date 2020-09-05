@@ -45,8 +45,10 @@
               items: [
                 { icon: 'mdi-account', title: 'About', route: '/about' },
                 { icon: 'mdi-account', title: 'Projects', route: '/projects' },
-                { icon: 'mdi-account', title: 'Education', route: '/education' },
                 { icon: 'mdi-account', title: 'Experience', route: '/experience' },
+                { icon: 'mdi-account', title: 'Education', route: '/education' },
+                { icon: 'mdi-account', title: 'Skills', route: '/skills' },
+                //{ icon: 'mdi-account', title: 'Interests', route: '/interests' },
                 //{ icon: 'mdi-facebook', title: 'Home', route: '/' },
             ]
           }

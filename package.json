@@ -1,5 +1,5 @@
 {
-  "name": "my-app",
+  "name": "mariaemnylund-site",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -17,7 +17,7 @@
     "vuetify": "^2.2.11"
   },
   "devDependencies": {
-    "@mdi/font": "^3.9.97",
+    "@mdi/font": "^5.5.55",
     "@typescript-eslint/eslint-plugin": "^2.33.0",
     "@typescript-eslint/parser": "^2.33.0",
     "@vue/cli-plugin-babel": "~4.5.0",
