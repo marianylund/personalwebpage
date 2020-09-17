@@ -74,6 +74,13 @@ export default {
         disableExplore: true,
         exploreRef: '',
         },
+        {show: false, title: 'Rubiks Cube', subtitle: 'Graphics project', date: '2020 Autumn',
+        img: '/rubiks.png', 
+        technology: 'WebGL, THREE.js, TypeScript, dat.gui',
+        description: '',
+        disableExplore: false,
+        exploreRef: '/interactive/rubiks.html',
+        },
       ],
     }
   }
