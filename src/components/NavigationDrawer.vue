@@ -1,79 +1,70 @@
 <template>
   <v-container>
+    <v-app-bar 
+      v-if="barVisibility" 
+      app 
+      dark
+    >
+      <v-spacer></v-spacer>
+      <v-app-bar-nav-icon @click="mobileDrawer = true"></v-app-bar-nav-icon>
+    </v-app-bar>
+    
+    <v-navigation-drawer
+      v-model="mobileDrawer"
+      absolute
+      temporary
+      color="primary"
+    >
+      <NavigationBar />
+    </v-navigation-drawer>
+
     <v-navigation-drawer permanent 
         v-if="drawerVisibility" 
         app disable-resize-watcher
         color="primary"
-        >
-    <v-list nav>
-        <v-list-item>
-        <v-list-item-avatar class="outlinedAvatar" size=150>
-            <img src="../assets/profile.jpg">
-        </v-list-item-avatar>
-        
-        </v-list-item>
-    </v-list>
-
-    <v-list
-    mandatory
-      >
-        <v-list-item
-          v-for="item in items"
-          :key="item.title"
-          link
-          router :to="item.route"
-        >
-          <!-- <v-list-item-icon>
-            <v-icon>{{ item.icon }}</v-icon>
-          </v-list-item-icon> -->
-
-          <v-list-item-content>
-            <v-list-item-title>{{ item.title }}</v-list-item-title>
-          </v-list-item-content>
-        </v-list-item>
-      </v-list>
-
+    >
+      <NavigationBar />
     </v-navigation-drawer>
-
   </v-container>
 </template>
 
-<script>
-  export default {
-      data(){
-          return {
-              items: [
-                { icon: 'mdi-account', title: 'About', route: '/' },
-                { icon: 'mdi-account', title: 'Projects', route: '/projects' },
-                { icon: 'mdi-account', title: 'Experience', route: '/experience' },
-                { icon: 'mdi-account', title: 'Education', route: '/education' },
-                { icon: 'mdi-account', title: 'Skills', route: '/skills' },
-                //{ icon: 'mdi-account', title: 'Interests', route: '/interests' },
-                //{ icon: 'mdi-facebook', title: 'Home', route: '/' },
-            ]
-          }
-      },
+<script lang="ts">
+import Vue from "vue";
+import NavigationBar from "./NavigationBar.vue";
 
-    mounted () {
-      console.log(this.$vuetify.breakpoint)
+export default Vue.extend({
+  components: {
+    NavigationBar
+  },
+    data: function(){
+        return {
+          mobileDrawer: false,
+        }
     },
-
-    computed: {
-      drawerVisibility () {
+    
+   computed: {
+      barVisibility () {
           if(this.$vuetify.breakpoint.name == 'xs'){
-              return false;
+              return true;
           }
-          return true;
+          return false;
+      },
+      drawerVisibility () {
+        if(this.$vuetify.breakpoint.name != 'xs'){
+            return true;
+        }
+        return false;
+      },
+      mobileDrawerVisibility () {
+        if(this.$vuetify.breakpoint.name == 'xs' && this.$props.mobileDrawer){
+            return true;
+        }
+        return false;
       },
     },
-  }
+  mounted () {
+    console.log(this.$vuetify.breakpoint)
+  },
+});
 </script>
 
-<style scoped>
-.outlinedAvatar {
-    border-radius: 50%;
-    margin-left: auto !important;
-    margin-right: auto !important;
-    box-shadow: 0px 0px 0px 10px rgb(78, 71, 71);
-}
-</style>
